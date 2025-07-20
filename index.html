@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Salam, Pertanyaan, Jawaban Responsive</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: black;
+    overflow-x: hidden;
+  }
+  .section {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 5vw; /* font menyesuaikan lebar layar */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease;
+    background-size: cover;
+    background-position: center;
+  }
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 5vw;
+    max-font-size: 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: rgba(0, 100, 0, 0.9);
+  }
+  /* Background masing-masing section */
+  #section1 {
+    background-image: url('https://img1.pixhost.to/images/7358/624129838_manzz.jpg');
+  }
+  #section2 {
+    background-image: url('https://img1.pixhost.to/images/7358/624129895_manzz.jpg');
+  }
+  #section3 {
+    background-image: url('https://img1.pixhost.to/images/7358/624129984_manzz.jpg');
+  }
+
+  /* Responsive tweaks */
+  @media (min-width: 600px) {
+    .section {
+      font-size: 24px;
+      padding: 40px;
+    }
+    button {
+      font-size: 18px;
+      max-font-size: none;
+      padding: 12px 35px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="section1" class="section visible">
+  <h1>HALLO ADEK KU TERCINTAA</h1>
+  <p>GIMANA KABAR ADEK HARI INII??😊</p>
+  <button id="btn1">tekan atau bg ngambekk</button>
+</div>
+
+<div id="section2" class="section">
+  <h1>apakah adek sudah makan? minum? olahraga? senam? bernafas? jalan? lari? tidur? mandi?</h1>
+  <p>ABANG HARAP UDAH SEMUA YAKKK</p>
+  <button id="btn2">tekan nih yaa,terkahir ko:)</button>
+</div>
+
+<div id="section3" class="section">
+  <h1>adek tau nggak kenapa abg tiap hari nanya begitu terus?:</h1>
+  <p>karenaa....
+      abang udh anggap adek seperti adek kandung abg,abg udh anggap adek teman curhat abg,jadii abg ingin memastikan adek itu sehat,baik,ceria,gembira,senang,nggak sedih,karena apa?? kalau adek sakit/sedih abg bakalan ngerasain jugaa apa yang adek rasakan,makanya abg sering nanya"in adek ini itu,biar abg tau keadaan adek gimana nyaa,jadi kalau adekk mau curhat atau adek mau cerita ke abg,calling aja okee,jadikan aja abg nih sebagai teman dekat yang paling adek kenal akrab yaa walaupun kita baru kenal,heheheheh
+      jadi jangan sungkan okeyy kalau mau cerita,malahan nih yaa dekk,abg pengen adek cerita mulu tiap hariu,kalau rasanya adek nggak ada chat abg,atau adek nggak ada chat abg ituu rasanya sepi,beneran dehh dekk,jadi cerita ke abg yaa,andd tetal semangat adek sekolah nyaa,maaf yaa kalau panjang,soalnya ini khusus buat adek abg buatin:))
+      dibacaa,jangan diskip doang😏
+      </p>
+</div>
+
+<script>
+  const section1 = document.getElementById('section1');
+  const section2 = document.getElementById('section2');
+  const section3 = document.getElementById('section3');
+  const btn1 = document.getElementById('btn1');
+  const btn2 = document.getElementById('btn2');
+
+  btn1.addEventListener('click', () => {
+    section1.classList.remove('visible');
+    setTimeout(() => {
+      section2.classList.add('visible');
+    }, 500);
+  });
+
+  btn2.addEventListener('click', () => {
+    section2.classList.remove('visible');
+    setTimeout(() => {
+      section3.classList.add('visible');
+    }, 500);
+  });
+</script>
+
+</body>
+</html>
